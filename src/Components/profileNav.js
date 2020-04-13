@@ -3,18 +3,20 @@ import {NavLink} from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import userActions from '../Redux/Actions/userActions';
 
-const NavBar = () => {
-  const dispatch = useDispatch();
-  const handleUserDelete = () => {
-    dispatch(userActions.deleteUserFromDB(user.id));
-  };
+const profileNav = () => {
+    const dispatch = useDispatch();
+    const handleUserDelete = () => {
+      dispatch(userActions.deleteUserFromDB(user.id));
+    };
+  
   return(
     <ul className="nav">
       <button to="/delete" onClick={handleUserDelete}>
         Delete profile
       </button>
+      <NavLink to="/edit">Edit Profile</NavLink>
     </ul>
   )
 };
 
-export default NavBar;
+export default profileNav;

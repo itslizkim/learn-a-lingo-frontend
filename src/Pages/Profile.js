@@ -12,17 +12,15 @@ export default function Profile() {
     dispatch(userActions.deleteUserFromDB(user.id));
   };
 
-  const handleUserUpdate = () => {
-    return (
-      <EditForm/>
-    );
-  };
+  // const handleUserUpdate = () => {
+  
+  // };
 
   return (
     <div>
       <h1>{user.name ? user.name + "'s": "You must be logged in to view this"} Profile</h1>
       <h3>{user.email}</h3>
-      <button onClick={() => handleUserUpdate()}>Edit Profile</button>
+      <EditForm />
       <ProgressTrail/>
       <button onClick={() => handleUserDelete()}>Delete Profile</button>
     </div>

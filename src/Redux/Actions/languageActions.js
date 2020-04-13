@@ -12,4 +12,8 @@ const getLanguages = () => dispatch => {
     .then(languages => {
         dispatch(setLanguageAction(languages));
     })
-}
+};
+
+export default {
+    getLanguages
+};

@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
-import FlashCard from '../Components/FlashCard';
+import FlashCards from '../Components/FlashCardContainer';
 
 
 export default class Lesson extends Component {
 
     state = {
-        lessons: []
+        flashcards: []
     };
 
+    componentDidMount() {
+        fetch (`http://localhost:3000/flash_cards`)
+        .then(r => r.json())
+        .then( resp => this.setState({
+            flashcards: resp
+        }))
+    };
+    
     render() {
         return (
             <div>
-                <FlashCard/>
+                <FlashCards flashcards={this.state.flashcards}/>
             </div>
         )
     }

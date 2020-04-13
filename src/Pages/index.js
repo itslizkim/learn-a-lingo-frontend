@@ -8,6 +8,7 @@ import Login from './Login';
 import Signup from './SignUp';
 import English from './languages/English';
 import '../Stylesheets/master.scss';
+import AccountEdit from '../Components/AccountEdit';
 
 export default function Routes() {
   return (
@@ -19,6 +20,7 @@ export default function Routes() {
       <Route exact path="/login" component={Login} />
       <Route exact path="/signup" component={Signup} />
       <Route exact path="/languages/English" component={English} />
+      <Route exact path="/edit" component={AccountEdit}/>
     </Switch>
   );
 }

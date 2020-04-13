@@ -9,6 +9,7 @@ const Home = () => {
   ) : (
     <h4>Nobody is logged in</h4>
   );
+
   return (
     <div>
       {text}

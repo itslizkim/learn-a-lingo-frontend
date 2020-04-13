@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import userActions from '../Redux/Actions/userActions';
+import { Button, Form } from 'semantic-ui-react'
 
 const LoginPage = props => {
   // initializing dispatch
@@ -34,7 +35,7 @@ const LoginPage = props => {
                 name="email"
                 value={email}
                 onChange={handleChange}
-                placeholder="email"
+                placeholder="Email"
             />
             <input
                 type="password"

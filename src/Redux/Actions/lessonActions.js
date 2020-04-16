@@ -5,7 +5,6 @@ const setLessonAction = lessons => ({
     payload: lessons
 })
 
-
 const getLessons = () => dispatch => {
     fetch(BASE_URL)
     .then(r => r.json())

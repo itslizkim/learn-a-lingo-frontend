@@ -1,59 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,600&family=Raleway:wght@500&display=swap');
-
-
-
- * {
-  box-sizing: border-box;
-  font-family: 'Mali', cursive;
-  color: black;
-}
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Roboto:wght@700&display=swap');
 
 html,
 body,
 #root {
   margin: 0;
-  padding: 0;
+  padding-top: 2vh;
   height: 100vh;
   width: 100vw;
+  background-image: url("https://cdn4.vectorstock.com/i/1000x1000/99/18/abstract-globe-vector-3959918.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(55, 128, 177, 0.603);
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-
-.header {
-    color: black;
-}
-
-li {
-    list-style: none;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: rgb(135, 108, 197);
-    width: 100%;
-    padding: 3vh 0;
-    text-align: center;
+.header{
+  color: rgba(0, 0, 0, 0.733);
+  font-family: 'Monoton', cursive;
+  font-size: 100px;
+  float: left;
+  text-align: center;
+  text-shadow: 1px 4px 6px rgb(255, 255, 255);
 }
 
 .homelink {
-    font-size: 18pt;
+  color: rgb(0, 0, 0);
+  font-family: 'Monoton', cursive;
+  font-size: 60px;
+  text-align: center;
 }
 
-.homenav {
-    color: #262626;
-}
-
-.lesson {
+ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  margin: 0px;
+  justify-content: space-evenly;
+  background-color: rgba(55, 128, 177, 0.603);
+  width: 100%;
+  padding: 2vh;
+  height: 7vh;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+li a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 10px;
+}
+
+li a:hover {
+  background-color: rgb(158, 215, 238);
+  color: rgb(0, 162, 255)
+}
+
+.login{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.user{
+  margin-top: 2%;
+  img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+} 
+
+.row{
+  object-fit: none;
 }
 
 .flash-card {
@@ -64,7 +88,7 @@ li {
   justify-content: center;
   height: 25vw;
   width: 25vw;
-  box-shadow: 0 4px 8px 0 rgb(135, 108, 197);
+  box-shadow: 0 4px 8px 0 rgb(55, 128, 177);
   transition: 0.3s;
   background-color: #ffffff;
   color: rgb(122, 59, 59);
@@ -89,12 +113,14 @@ li {
     input {
       width: 40%;
       padding: 10px;
+      border-radius: 18px;
     }
     input[type='submit'] {
       width: 20%;
     }
+    .ui.button{
+      color: rgb(55, 128, 177);
+    }
   }
-  button {
-    width: 30%;
-  }
+
 }

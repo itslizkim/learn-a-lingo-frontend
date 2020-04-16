@@ -1,18 +1,10 @@
 import React from 'react'
-// import { Card, Image } from 'semantic-ui-react'
 
 class flashCard extends React.Component {
 
   state = {
     audio: false
   }
-
-//   handleAudio = (props) => {
-    
-//     let x = document.getElementByrc("audio")
-    
-//     x.play();
-//   }
 
   render() {
     const {word, audio, img_url} = this.props.flashcard

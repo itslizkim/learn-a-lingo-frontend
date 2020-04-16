@@ -1,6 +1,5 @@
 import React from 'react';
-import FlashCard from './flashCard'
-import { Card } from 'semantic-ui-react'
+import FlashCard from '../Components/flashCard'
 
 const FlashCardContainer = (props) => {
 
@@ -13,9 +12,9 @@ const FlashCardContainer = (props) => {
     })
 
     return (
-        <Card.Group itemsPerRow={6}>
-        {flashCardArray}
-        </Card.Group>
+        <div className="cards">
+        <li>{flashCardArray}</li>
+        </div>
     )
 
 

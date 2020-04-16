@@ -16,6 +16,11 @@ const clearUserAction = () => ({
   type: 'CLEAR_USER'
 });
 
+const setUserProgress = userObj => ({
+  type: 'SET_PROGRESSTRAIL',
+  payload: userObj.progress_trails
+})
+
 // Fetch
 
 const newUserToDB = userObj => dispatch => {
@@ -89,6 +94,7 @@ const persistUser = () => dispatch => {
     .then(r => r.json())
     .then(userInstance => {
       dispatch(setUserAction(userInstance));
+      dispatch(setUserProgress(userInstance))
     });
 };
 

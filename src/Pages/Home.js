@@ -1,19 +1,19 @@
 import React from 'react';
-import HomeNav from '../Components/HomeNav';
+import Nav from '../Components/Navbar'
 import { useSelector } from 'react-redux';
 
 const Home = () => {
   const user = useSelector(state => state.user);
-  const text = user ? (
-    <h1> Hey, {user.name}!</h1>
-  ) : (
-    <h4>Nobody is logged in</h4>
-  );
-
+  const text = 
+    <div className="user">
+      <h1> Hey, {user.name}!</h1>
+      <img alt="profile_pic" src={user.profile_pic} />
+    </div>
+    
   return (
     <div>
+      <Nav/>
       {text}
-      <HomeNav/>
     </div>    
   )
 }

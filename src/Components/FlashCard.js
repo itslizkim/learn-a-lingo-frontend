@@ -2,10 +2,6 @@ import React from 'react'
 
 class flashCard extends React.Component {
 
-  state = {
-    audio: false
-  }
-
   render() {
     const {word, audio, img_url} = this.props.flashcard
     return (

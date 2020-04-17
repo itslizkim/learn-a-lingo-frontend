@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector,useDispatch } from 'react-redux';
 import userActions from '../Redux/Actions/userActions';
-import ProgressTrail from '../Components/ProgressTrail';
+import Trail from '../Components/Trails';
 import Nav from '../Components/Navbar'
 
 export default function Profile() {
@@ -18,7 +18,7 @@ export default function Profile() {
       <h1>{user.name ? user.name + "'s" : "You must be logged in to view this"} Profile</h1>
       <img alt="profile_pic" src={user.profile_pic}/>
       <h3>Email: {user.email}</h3>
-      <ProgressTrail/>
+      <Trail/>
       <button onClick={() => handleUserDelete()}>Delete Profile</button>
     </div>
   );

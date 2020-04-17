@@ -8,21 +8,17 @@ const LessonContainer = () => {
 
     const lessons = useSelector(state => state.lessons)
 
-    const renderLessons = (lessonsArr) => {
-        return !lessonsArr.length ? null : lessonsArr.map(lesson =>
-    
-            <Lesson
-                key={lesson.id}
-                lesson={lesson}
-            />
-        )
-        
-    }
+    const lessonArr = lessons.map(lesson => {
+        return <Lesson
+        key={lesson.id}
+        lesson={lesson}
+        />
+    })
 
     return (
         console.log(lessons),
-        <Card.Group itemsPerRow={3}>
-            {renderLessons(lessons)}
+        <Card.Group className="cards" itemsPerRow={3}>
+            {lessonArr}
         </Card.Group>
     )
 

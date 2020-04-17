@@ -1,18 +1,8 @@
-let initialState = {
-    all: []
+export default (state = [], {type, payload}) => {
+  switch (type) {
+    case 'SET_LESSONS':
+      return payload;
+    default:
+      return state;
   }
-
-  let lessonReducer = (state = initialState, action) => {
-    switch (action.type) {
-  
-      case "SET_LESSONS":
-        return {
-          ...state,
-          all: action.payload
-        }
-      default:
-        return state
-    }
-  }
-  
-  export default lessonReducer
+}

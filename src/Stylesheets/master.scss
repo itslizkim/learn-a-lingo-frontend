@@ -76,8 +76,19 @@ li a:hover {
   }
 } 
 
-.row{
-  object-fit: none;
+.cards{
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  img{
+    width: 400px;
+    height: 600px
+  }
+  img:hover{
+    opacity: 50%;
+  }
 }
 
 .flash-card {
@@ -91,9 +102,10 @@ li a:hover {
   box-shadow: 0 4px 8px 0 rgb(55, 128, 177);
   transition: 0.3s;
   background-color: #ffffff;
-  color: rgb(122, 59, 59);
+  color: rgb(55, 128, 177);
   img {
     width: 60%;
+    height: 40%;
   }
 }
 

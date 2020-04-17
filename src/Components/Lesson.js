@@ -1,27 +1,34 @@
 import React from 'react';
-import FlashCardContainer from '../Pages/FlashCardContainer';
 import {Card} from 'semantic-ui-react'
+import { useHistory } from 'react-router-dom'
 
 function Lesson(props) {
 
-    const {name, img_url, flash_cards} = props.lesson
-    console.log(props.lesson)
+  const history = useHistory()
 
-    const handleLessonClick = () => {
-      return( <FlashCardContainer flash_cards={flash_cards}/> )
+  const {name, img_url} = props.lesson
+  console.log(props.lesson)
+
+  const handleLessonClick = (e) => {
+    console.log(e.target)
+    if (e.target = "fruits") {
+      return (history.push('/lessons/fruits'))
     }
+    if (e.target = "alphabet") {
+      return (history.push('/lessons/alphabet'))
+    }
+    if (e.target = "animals") {
+      return (history.push('/lessons/animals'))
+    }
+  }
 
-    return (
-      <Card onClick={handleLessonClick}>
-        <div className="image">
-          <img alt="oh no!" src={img_url}/>
-        </div>
-        <div className="content">
-          <div className="header">{name}</div>
-        </div>
-      </Card>
-    )
+  return (
+    <Card className="card">
+      <Card.Content onClick={handleLessonClick}>
+        <img alt={name} src={img_url}/>
+        <div className="header" >{name}</div>
+      </Card.Content>
+    </Card>
+  )
 
-}
-
-export default Lesson
+} export default Lesson;

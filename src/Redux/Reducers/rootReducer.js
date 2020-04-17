@@ -1,14 +1,16 @@
 import { combineReducers } from 'redux';
 import userReducer from './userReducer';
 import languageReducer from './languageReducer';
-import progressTrailReducer from './progressTrailReducer';
+import trailReducer from './trailReducer';
 import lessonReducer from './lessonReducer';
+import flashcardReducer from './flashcardReducer'
 
 const state = {
   user: userReducer,
   languages: languageReducer,
-  progress_trail: progressTrailReducer,
-  lessons: lessonReducer
+  trail: trailReducer,
+  lessons: lessonReducer,
+  flashcards: flashcardReducer
 };
 
 export default combineReducers(state);

@@ -16,33 +16,6 @@ const App = () => {
       dispatch(userActions.persistUser())
     }
     dispatch(lessonActions.getLessons());
-
-    fetch('http://localhost:3000/lessons/fruits')
-    .then(r => r.json())
-    .then(fruits => {
-      dispatch({
-          type: "SET_FLASHCARDS",
-          payload: fruits.flash_cards
-      })
-      console.log(fruits.flash_cards)}) 
-
-    fetch('http://localhost:3000/lessons/alphabet')
-    .then(r => r.json())
-    .then(alphabet => {
-      dispatch({
-          type: "SET_FLASHCARDS",
-          payload: alphabet.flash_cards
-      })
-    })
-
-    fetch('http://localhost:3000/lessons/animals')
-    .then(r => r.json())
-    .then(animals => {
-      dispatch({
-          type: "SET_FLASHCARDS",
-          payload: animals.flash_cards
-      })
-    })
   });
 
   return (

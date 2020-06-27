@@ -16,13 +16,6 @@ const clearUserAction = () => ({
   type: 'CLEAR_USER'
 });
 
-// const setUserProgress = userObj => ({
-//   type: 'SET_TRAIL',
-//   payload: userObj.trails
-// })
-
-// Fetch
-
 const newUserToDB = userObj => dispatch => {
   const config = {
     method: 'POST',

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Card} from 'semantic-ui-react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Nav from '../Components/Navbar'
 
 const Animals = () => {

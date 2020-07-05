@@ -80,11 +80,11 @@ li a:hover {
   display: flex;
   // flex-direction: column;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   
   img{
-    width: 400px;
-    height: 600px
+    width: 300px;
+    height: 400px
   }
   img:hover{
     opacity: 50%;
@@ -103,10 +103,17 @@ li a:hover {
   transition: 0.3s;
   background-color: #ffffff;
   color: rgb(55, 128, 177);
+  border-radius: 4rem;
   img {
     width: 60%;
     height: 40%;
+  };
+  audio {
+    width: 70%;
+
   }
+
+
 }
 
 .form-page {

@@ -30,13 +30,7 @@ const Animals = () => {
 
     const {word, audio, img_url} = props.animal
 
-    const playAudio = () => {
-      console.log(audio)
-      
-    }
-
     return (
-      
         <div className="flash-card">
             <img alt="oh no!" src={img_url}/>
             <div className="word"><h1>{word}</h1></div>

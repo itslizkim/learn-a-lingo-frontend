@@ -9,6 +9,7 @@ A user can:
 
 # dev tools
 - `React` - creates the functionality for the app
+- `Redux` - serves as state container to pass easily from component to component
 - `HTML` - serves as the interface 
 - `CSS` - used to design the app
 
